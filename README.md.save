@@ -1,0 +1,49 @@
+# SP25_DS5111_mxg9xv
+
+## Bootstrapping for a New VM
+1. Clone this repo.
+2. Run `./init.sh` to install make, python3.12-venv, and tree.
+
+
+# LAB-05: Setting up Your Tests to Run in GitHub Actions
+
+In this lab, you'll use GitHub Actions to run the test automation we created using pytest, pylint, and a Makefile. The goal is to have a GitHub Workflow that runs your tests on demand. Follow the steps below to set up a basic workflow, and feel free to enhance it as you become more comfortable.
+
+---
+
+## Quick Workflow Setup
+
+### Part 1: Running Your Linter and Tests
+
+1. **Create Workflow Directory:**  
+   Create a directory named `.github/workflows` in your repository. This is where GitHub looks for workflow files.
+
+2. **Create the Workflow File:**  
+   Create a file named `validations.yml` inside that directory and add the following content:
+
+   ```yaml
+   name: Feature Validation
+
+   on:
+     push:
+     workflow_dispatch:
+
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       strategy:
+         matrix:
+           python-version: ["3.10"]
+
+       steps:
+         - uses: actions/checkout@v4
+         - name: Set up Python ${{ matrix.python-version }}
+           uses: actions/setup-python@v4
+           with:
+             python-version: ${{ matrix.python-version }}
+         - name: Install dependencies
+           run: |
+             make update
+         - name: Test with pytest
+           run: |
+             make test
