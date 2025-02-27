@@ -7,6 +7,7 @@
 
 ```markdown
 # LAB-05: GitHub Actions Setup
+
 You'll learn how to set up GitHub Actions to automatically run your tests every time you push changes.
 ---
 
