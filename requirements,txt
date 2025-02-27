@@ -1,2 +1,0 @@
-pip install pytest  # Install locally if not already installed
-pip freeze > requirements.txt
