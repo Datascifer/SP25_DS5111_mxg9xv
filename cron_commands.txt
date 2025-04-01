@@ -1,0 +1,8 @@
+# 9:31 AM EST -> 14:31 UTC (Monday–Friday)
+31 14 * * 1-5 cd /home/ec2-user/SP25_DS5111_mxg9xv && /home/ec2-user/venv/bin/python get_gainer.py yahoo --some-timestamp-arg
+
+# 12:30 PM EST -> 17:30 UTC (Monday–Friday)
+30 17 * * 1-5 cd /home/ec2-user/SP25_DS5111_mxg9xv && /home/ec2-user/venv/bin/python get_gainer.py wsj --some-timestamp-arg
+
+# 4:01 PM EST -> 21:01 UTC (Monday–Friday)
+1 21 * * 1-5 cd /home/ec2-user/SP25_DS5111_mxg9xv && /home/ec2-user/venv/bin/python get_gainer.py yahoo --some-timestamp-arg
