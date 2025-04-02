@@ -4,6 +4,7 @@ import sys
 import os
 import logging
 
+# I like that your using logging!  Good habit
 # Set up basic logging configuration
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
