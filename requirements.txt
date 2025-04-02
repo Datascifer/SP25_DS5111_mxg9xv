@@ -1,3 +1,6 @@
+# like the way you versions and separated the 'working' and 'testing+' packages to make it clear what is 
+# being used where.
+
 # Essential libraries for the project
 pandas==1.5.3
 lxml==4.9.2
