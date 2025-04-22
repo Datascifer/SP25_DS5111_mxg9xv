@@ -1,8 +1,5 @@
-# Essential libraries for the project
-pandas==1.5.3
-lxml==4.9.2
-html5lib==1.1
-
-# Testing and linting
-pytest==7.4.4
-pylint==2.15.0 
+pandas
+lxml
+html5lib
+pylint
+pytest
