@@ -6,3 +6,7 @@ html5lib==1.1
 # Testing and linting
 pytest==7.4.4
 pylint==2.15.0 
+beautifulsoup4
+requests
+numpy==1.24.4
+pandas==1.5.3
