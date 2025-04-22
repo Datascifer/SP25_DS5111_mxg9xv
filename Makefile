@@ -29,3 +29,7 @@ lint:
 
 test: lint
 	./env/bin/pytest -vv tests
+test: lint pytest check-csv
+
+pytest:
+	./env/bin/pytest -vv tests
